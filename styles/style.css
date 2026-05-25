@@ -7,14 +7,95 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
-  /*outline: 1px dotted red;*/
+  /* outline: 1px dotted red; */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--white);
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+}
+
+:root {
+  /* 60-30-10 */
+  /* primary = 60 */
+  /* secondary = 30 */
+  /* accent = 10 */
+  --primary: #000;
+  --secondary: blanchedalmond;
+  --accent: #000;
+  --white: #fff;
+}
+
+body {
+  height: 100vh;
+  padding: 0 5rem;
+  background-color: var(--primary);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  background-color: var(--primary);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  
+}
+
+h1 span:first-child {
+  font-size: 15rem;
+  font-weight: 800;
+  letter-spacing: -10px;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+h1 span:last-child {
+  font-size: 10rem;
+  font-weight: 500;
+  letter-spacing: -15px;
+  line-height: 1.2;
+  color: var(--secondary);
 }
