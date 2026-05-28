@@ -122,8 +122,9 @@ nav::after {
   content: '';
   position: absolute;
   inset: 0;
+  border-bottom: 1px solid var(--border);
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(8, 8, 8, 0.9) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(8, 8, 8, 0.9) 100%, rgba(8, 8, 8, 0.9) 0%);
   z-index: -1;
 }
 
@@ -176,7 +177,7 @@ nav::after {
   font-size: clamp(8rem, 20vw, 22rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  -webkit-text-stroke: 1px solid rgba(240, 236, 228, 0.04);
+  -webkit-text-stroke: 1px solid rgba(240, 236, 228, 0.1);
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
@@ -408,4 +409,56 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5px;
+}
+
+.split-hover:hover .inner {
+  transform: translateY(-102%);
+}
+
+a, button, [data-hover] {
+  cursor: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowDrift {
+  0% {
+    transform: translate(-50%, -55%);
+    scale: 1;
+  } 100% {
+    transform: translate(-50%, -53%);
+    scale: 1.02;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  } 50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  } 50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translate(-50%);
+  }
 }
