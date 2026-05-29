@@ -624,6 +624,140 @@ section {
   color: var(--accent2);
 }
 
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5px;
+}
+
+.art-item {
+  position: relative;
+  aspect-ratio: 1;
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.art-item.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.art-bg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.art-item:hover .art-bg {
+  transform: scale(1.08);
+}
+
+.art-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: var(--fg);
+  background: rgba(8, 8, 8, 0.5);
+}
+
+.art-item:hover .art-overlay {
+  opacity: 1;
+}
+
+.art-1 {
+  background: linear-gradient(135deg, #1c1a15 0%, #2d2518 50%, #1a1814 100%);
+}
+
+.art-2 {
+  background: linear-gradient(135deg, #141520 0%, #1d1f30 50%, #131520 100%);
+}
+
+.art-3 {
+  background: linear-gradient(45deg, #1a1510 0%, #2a2015 100%);
+}
+
+.art-4 {
+  background: linear-gradient(135deg, #0e1510 0%, #181f14 100%);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-left,
+.footer-right {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9d cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+.line-draw {
+  display: block;
+  overflow: hidden;
+}
+
+.line-draw span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.line-draw.visible span {
+  transform: translateY(0);
+}
+
+.split-hover {
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+.split-hover .inner {
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
 .split-hover:hover .inner {
   transform: translateY(-102%);
 }
