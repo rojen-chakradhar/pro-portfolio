@@ -446,7 +446,7 @@ section {
 .work-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 1.5px;
+	gap: 1rem;
 }
 
 .work-item {
@@ -553,26 +553,9 @@ section {
 	background: linear-gradient(135deg, #181614 0%, #25201a 100%);
 }
 
-.grid-decoration {
-	position: absolute;
-	inset: 0;
-	background-image:
-		linear-gradient(rgba(240, 236, 228, 0.03) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(240, 236, 228, 0.03) 1px, transparent 1px);
-	background-size: 40px 40px;
-}
-
-.circle-deco {
-	width: 180px;
-	height: 180px;
-	border-radius: 50%;
-	border: 1px solid rgba(240, 236, 228, 0.06);
-	position: absolute;
-}
-
 .games-row {
 	display: flex;
-	gap: 1.5px;
+	gap: 1rem;
 }
 
 .game-item {
@@ -856,7 +839,7 @@ button,
 .art-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 1.5px;
+	gap: 1rem;
 }
 
 .art-item {
