@@ -614,6 +614,16 @@ section {
   color: var(--fg-dim);
 }
 
+.game-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+}
+
 .split-hover:hover .inner {
   transform: translateY(-102%);
 }
